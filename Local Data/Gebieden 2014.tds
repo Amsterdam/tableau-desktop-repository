@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='Gebieden 2014' inline='true' source-platform='mac' version='9.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9100.16.0603.2216                                -->
+  <connection class='firebird' dbname='GEOCODING.FDB' local-data='{CAE1C9A8-2B65-4BD1-8B6C-45B5F37E37E5}' password='' username='sysdba'>
+    <relation join='inner' type='join'>
+      <clause type='join'>
+        <expression op='='>
+          <expression op='[LocalData].[ParentID]'>
+          </expression>
+          <expression op='[Gebieden 2014].[ID]'>
+          </expression>
+        </expression>
+      </clause>
+      <relation name='Gebieden 2014' table='[Gebieden 2014]' type='table' />
+      <relation name='LocalData' table='[LocalDataGebieden 2014]' type='table' />
+    </relation>
+    <cols>
+      <map key='[Geometry (generated)]' value='[LocalData].[Geometry]' />
+      <map key='[Gebieden 2014_Gebiedcode 2014]' value='[Gebieden 2014].[Gebiedcode 2014]' />
+      <map key='[Gebieden 2014_ParentID]' value='[Gebieden 2014].[ParentID]' />
+      <map key='[ID]' value='[Gebieden 2014].[ID]' />
+      <map key='[Latitude (generated)]' value='[LocalData].[Latitude]' />
+      <map key='[Longitude (generated)]' value='[LocalData].[Longitude]' />
+      <map key='[ParentID]' value='[LocalData].[ParentID]' />
+    </cols>
+  </connection>
+  <column caption='Geometry (generated)' datatype='string' name='[Geometry (generated)]' role='dimension' semantic-role='[Geographical].[Geometry]' type='nominal'>
+  </column>
+  <column caption='Gebiedcode 2014' datatype='string' name='[Gebieden 2014_Gebiedcode 2014]' role='dimension' semantic-role='[Gebieden 2014].[Gebiedcode 2014]' type='nominal'>
+  </column>
+  <column datatype='integer' default-role='measure' hidden='true' name='[Gebieden 2014_ParentID]' role='dimension' type='quantitative'>
+  </column>
+  <column datatype='integer' default-role='measure' hidden='true' name='[ID]' role='dimension' type='quantitative'>
+  </column>
+  <column aggregation='Avg' datatype='real' name='[Latitude (generated)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+  </column>
+  <column aggregation='Avg' datatype='real' name='[Longitude (generated)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+  </column>
+  <column datatype='integer' default-role='measure' hidden='true' name='[ParentID]' role='dimension' type='quantitative'>
+  </column>
+  <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+</datasource>
