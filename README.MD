@@ -1,10 +1,8 @@
 # Tableau Desktop Repository # 
-==============================
 
 City of Amsterdam neighbourhoods, background maps, postal codes and color styles files/settings for use in Tableau Desktop.
 
 ### What's it for? ###
-----------------------
 This repository contains usefull geometry files of the City of Amsterdam for use in Tableau Desktop Public/Personal or Professional.
 These are the neighbourhoods based on areas in the period 2011-2015 and the period from 2015 till now.
 
@@ -29,7 +27,6 @@ It contains:
 3. Standardized color styles which are used at https://ois.amsterdam.nl
 
 ### Install Procedure ###
--------------------------
 - Download the repository to your desktop
 - Unpack the zip file
 - Copy and overwrite all files into 'My Tableau Repository' located in My Documents. 
@@ -40,12 +37,10 @@ On Windows the directory is located here:
 The provided packaged workbook is saved packaged workbook to tableau public as a version 9.1 to maximize compatibility.
 
 ### Exceptions ###
-------------------
 If you use a virtualized machine where you cannot change the tableau repository:
 Download and open the provided packaged workbook to continue working with this file to have the geocoding options available.
 
 ### Background ###
-------------------
 These files are created using our WFS services found on https://api.data.amsterdam.nl.
 All neighbourhood layers were joined into one big shapefile.
 This shapefile was then converted to a custom geocoding option by using this excelent conversion tool created by Richard Leeke.
